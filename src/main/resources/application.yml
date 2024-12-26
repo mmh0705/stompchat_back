@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  #  security:
+  datasource:
+    url: jdbc:postgresql://121.162.75.86:5555/postgres?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: dmadkr6tkfa4
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    #'validate'
+    #   show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+#     hibernate.hbm2ddl.auto: create
+#      properties:
+#        hibernate:
+#          connection:
+#            provider_disables_autocommit: true
+#          query:
+#            in_clause_parameter_padding: true
+#            plan_parameter_metadata_max_size: 128
+#            plan_cache_max_size: 2048
+#          format_sql: true
+#      generate-ddl: true
+#      defer-datasource-initialization: true
+#      database: postgresql
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+#?? docker DB
+#  datasource:
+#    url: jdbc:postgresql://118.131.46.69:5555/marimba?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+#    driver-class-name: org.postgresql.Driver
+#    username: postgres
+#    password: gyrhkwjrdmfh1
